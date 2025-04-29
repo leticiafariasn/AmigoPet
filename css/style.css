@@ -3,3 +3,21 @@
 @import "header.css";
 @import "inicio.css";
 @import "content.css";
+
+body.menu-open {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    padding: 10px 20px;
+  }
+
+  .pag1 {
+    padding: 30px 20px;
+  }
+
+  .footer-column {
+    margin-left: 0;
+  }
+}

@@ -11,6 +11,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .logo img {
@@ -116,6 +117,128 @@ nav {
 .cadastro:hover {
   background-color: var(--primary-hover);
   transform: translateY(-2px);
+}
+
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--text-color);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-left: 30px;
+}
+
+@media (max-width: 992px) {
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .nav-container {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--bg-card);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 80px 20px 20px;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 15px var(--shadow-color);
+    margin-left: 0;
+    z-index: 5;
+    overflow-y: auto;
+  }
+
+  .nav-container.active {
+    right: 0;
+  }
+
+  .menu-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .menu-links li {
+    width: 100%;
+  }
+
+  .menu-links a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+  }
+
+  .drop {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    margin-top: 10px;
+    background-color: var(--hover-bg);
+  }
+
+  .drop-hover:hover .drop {
+    display: none;
+  }
+
+  .drop-hover.active .drop {
+    display: flex;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .login,
+  .cadastro {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .theme-toggle {
+    margin-bottom: 20px;
+  }
+
+  .mobile-menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
 }
 
 @keyframes fadeIn {

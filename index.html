@@ -14,35 +14,44 @@
             <div class="logo">
                 <img src="imgs/pata-de-cachorro-em-um-coracao.png" alt="logo-pet-shop">
             </div>
-            <ul class="menu-links">
-                <li class="drop-hover">
-                    <a href="#">Início Rápido</a>
-                </li>
-                <li class="drop-hover">
-                    <a href="#">Sobre Nós</a>
-                </li>
-                <li class="drop-hover">
-                    <a href="#">Produtos Pet</a>
-                </li>
-                <li class="drop-hover">
-                    <a href="#">Serviços Especiais</a>
-                    <div class="drop">
-                        <a href="#">Promoções</a>
-                        <a href="#">Contato</a>
-                        <a href="#">Blog Pet</a>
-                    </div>
-                </li>
-            </ul>
-            <div class="buttons">
-                <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
-                    <div class="toggle-track"></div>
-                    <div class="toggle-thumb">
-                        <img src="imgs/dog-button.png" alt="Modo claro" class="dog-icon">
-                        <img src="imgs/cat-button.png" alt="Modo escuro" class="cat-icon">
-                    </div>
-                </button>
-                <button class="login">Entrar</button>
-                <button class="cadastro">Cadastrar</button>
+            
+            <button class="mobile-menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-container">
+                <ul class="menu-links">
+                    <li class="drop-hover">
+                        <a href="#">Início Rápido</a>
+                    </li>
+                    <li class="drop-hover">
+                        <a href="#">Sobre Nós</a>
+                    </li>
+                    <li class="drop-hover">
+                        <a href="#">Produtos Pet</a>
+                    </li>
+                    <li class="drop-hover">
+                        <a href="#">Serviços Especiais</a>
+                        <div class="drop">
+                            <a href="#">Promoções</a>
+                            <a href="#">Contato</a>
+                            <a href="#">Blog Pet</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="buttons">
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                        <div class="toggle-track"></div>
+                        <div class="toggle-thumb">
+                            <img src="imgs/dog-button.png" alt="Modo claro" class="dog-icon">
+                            <img src="imgs/cat-button.png" alt="Modo escuro" class="cat-icon">
+                        </div>
+                    </button>
+                    <button class="login">Entrar</button>
+                    <button class="cadastro">Cadastrar</button>
+                </div>
             </div>
         </nav>
     </header>
@@ -235,5 +244,6 @@
     </footer>
 
     <script src="js/theme.js"></script>
+    <script src="js/mobile-menu.js"></script>
 </body>
 </html>
