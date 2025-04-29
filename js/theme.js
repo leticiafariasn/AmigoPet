@@ -1,40 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Verificar se há uma preferência de tema salva
   const savedTheme = localStorage.getItem("theme")
 
-  // Aplicar tema salvo ou verificar preferência do sistema
   if (savedTheme) {
     document.documentElement.className = savedTheme
   } else {
-    // Verificar preferência do sistema para modo escuro
-    const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
-    if (prefersDarkMode) {
-      document.documentElement.classList.add("dark-theme")
-      document.documentElement.classList.remove("light-theme")
-    } else {
-      document.documentElement.classList.add("light-theme")
-      document.documentElement.classList.remove("dark-theme")
-    }
+    document.documentElement.classList.add("dark-theme")
+    document.documentElement.classList.remove("light-theme")
+    localStorage.setItem("theme", "dark-theme")
   }
 
-  // Adicionar evento de clique ao botão de alternância de tema
   const themeToggle = document.getElementById("theme-toggle")
 
   themeToggle.addEventListener("click", () => {
     if (document.documentElement.classList.contains("light-theme")) {
-      // Mudar para tema escuro
       document.documentElement.classList.remove("light-theme")
       document.documentElement.classList.add("dark-theme")
       localStorage.setItem("theme", "dark-theme")
     } else {
-      // Mudar para tema claro
       document.documentElement.classList.remove("dark-theme")
       document.documentElement.classList.add("light-theme")
       localStorage.setItem("theme", "light-theme")
     }
   })
 
-  // Adicionar efeitos de hover aos cards
   const cards = document.querySelectorAll(".pet-card, .service-card, .testimonial-card")
 
   cards.forEach((card) => {
@@ -49,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  // Adicionar efeito de onda ao clicar nos botões
   const buttons = document.querySelectorAll("button:not(.theme-toggle)")
 
   buttons.forEach((button) => {
@@ -78,7 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  // Adicionar estilo de keyframes para animação de onda
   const style = document.createElement("style")
   style.innerHTML = `
     @keyframes ripple {
@@ -90,3 +76,4 @@ document.addEventListener("DOMContentLoaded", () => {
   `
   document.head.appendChild(style)
 })
+
