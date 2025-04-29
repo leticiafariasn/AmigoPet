@@ -24,13 +24,11 @@
   --hover-bg: #444;
 }
 
-/* Transições suaves para todos os elementos */
 * {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s
     ease, filter 0.3s ease;
 }
 
-/* Estilo para o botão de alternância de tema */
 .theme-toggle {
   position: relative;
   width: 70px;
@@ -45,12 +43,12 @@
 .toggle-track {
   position: absolute;
   top: 50%;
-  left: 0;
-  right: 0;
-  height: 20px;
-  margin-top: -10px;
+  left: 10px;
+  right: 10px;
+  height: 25px;
+  margin-top: -12px;
   background-color: var(--toggle-bg);
-  border-radius: 10px;
+  border-radius: 20px;
   transition: 0.3s;
 }
 
@@ -92,20 +90,17 @@
   opacity: 0;
 }
 
-/* Colorir o gato em roxo no modo escuro */
 .dark-theme .cat-icon {
   filter: brightness(0) saturate(100%) invert(56%) sepia(83%) saturate(1530%) hue-rotate(246deg) brightness(93%)
     contrast(85%);
 }
 
-/* Colorir as logos em roxo no modo escuro */
 .dark-theme .logo img,
 .dark-theme .logo-footer img {
   filter: brightness(0) saturate(100%) invert(56%) sepia(83%) saturate(1530%) hue-rotate(246deg) brightness(93%)
     contrast(85%);
 }
 
-/* Efeitos de hover elegantes */
 a,
 button:not(.theme-toggle) {
   position: relative;
