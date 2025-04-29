@@ -1,3 +1,4 @@
+/* Seção de Cuidados Pet */
 .pet-care-section {
   text-align: center;
   padding: 50px 20px;
@@ -163,6 +164,7 @@
   transform: translateX(5px);
 }
 
+/* Seção de Serviços */
 .services-section {
   text-align: center;
   padding: 60px 20px;
@@ -271,6 +273,7 @@
   box-shadow: 0 5px 15px rgba(164, 73, 204, 0.3);
 }
 
+/* Seção de Depoimentos */
 .testimonials-section {
   padding: 60px 20px;
   background-color: var(--bg-color);
@@ -381,6 +384,7 @@
   font-size: 14px;
 }
 
+/* Footer */
 .footer {
   background-color: var(--bg-card);
   padding: 40px 20px;
