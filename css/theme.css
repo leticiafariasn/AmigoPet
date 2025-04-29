@@ -1,0 +1,139 @@
+:root {
+  --primary-color: #a449cc;
+  --primary-hover: #8a3dab;
+  --text-color: #333;
+  --text-light: #777;
+  --bg-color: #f9f9f9;
+  --bg-card: #ffffff;
+  --border-color: #ddd;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --hover-bg: #f0f0f0;
+  --toggle-bg: #cccccc;
+  --toggle-bg-dark: #666666;
+}
+
+.dark-theme {
+  --primary-color: #b96ad9;
+  --primary-hover: #a449cc;
+  --text-color: #e0e0e0;
+  --text-light: #b0b0b0;
+  --bg-color: #2a2a2a;
+  --bg-card: #3a3a3a;
+  --border-color: #444;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --hover-bg: #444;
+}
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s
+    ease, filter 0.3s ease;
+}
+
+.theme-toggle {
+  position: relative;
+  width: 70px;
+  height: 34px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.toggle-track {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  right: 10px;
+  height: 25px;
+  margin-top: -12px;
+  background-color: var(--toggle-bg);
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.dark-theme .toggle-track {
+  background-color: var(--toggle-bg-dark);
+}
+
+.toggle-thumb {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  left: 0;
+  top: 0;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.dark-theme .toggle-thumb {
+  transform: translateX(36px);
+}
+
+.dog-icon,
+.cat-icon {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.dark-theme .dog-icon {
+  opacity: 0;
+}
+
+.light-theme .cat-icon {
+  opacity: 0;
+}
+
+.dark-theme .cat-icon {
+  filter: brightness(0) saturate(100%) invert(56%) sepia(83%) saturate(1530%) hue-rotate(246deg) brightness(93%) contrast(85%);
+}
+
+.dark-theme .logo img,
+.dark-theme .logo-footer img {
+  filter: brightness(0) saturate(100%) invert(56%) sepia(83%) saturate(1530%) hue-rotate(246deg) brightness(93%) contrast(85%);
+}
+
+a,
+button:not(.theme-toggle) {
+  position: relative;
+  overflow: hidden;
+}
+
+a::after,
+button:not(.theme-toggle)::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+a:hover::after,
+button:not(.theme-toggle):hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.pet-card,
+.service-card,
+.testimonial-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pet-card:hover,
+.service-card:hover,
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+
